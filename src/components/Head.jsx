@@ -19,7 +19,7 @@ export const Head = () => {
         />
       </div>
 
-      <div className="flex items-center justify-center col-span-6 space-x-0">
+      <div className="col-span-6 flex justify-center items-center space-x-0">
         <a href="/">
           <img
             className="h-12"
@@ -27,14 +27,16 @@ export const Head = () => {
             alt="Goutube Logo"
           />
         </a>
-        <input
-          className="h-8 text-center rounded-l-full w-72 uppercase bg-gray-300 border-none outline-none"
-          type="text"
-          placeholder="Search"
-        />
-        <button className="uppercase text-center py-1 bg-slate-500 px-4 text-white rounded-r-full border-none">
-          Search
-        </button>
+        <div className="flex items-center">
+          <input
+            className="h-8 text-center rounded-l-full w-72 uppercase bg-gray-300 border-none outline-none"
+            type="text"
+            placeholder="Search"
+          />
+          <button className="uppercase text-center py-1 bg-slate-500 px-4 text-white rounded-r-full border-none">
+            Search
+          </button>
+        </div>
       </div>
 
       <div className="flex justify-end items-center col-span-3 ">
