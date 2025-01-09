@@ -1,3 +1,9 @@
+import { Button } from "./Button";
+
 export const Buttonlist = () => {
-  return <div>Buttonlist</div>;
+  return (
+    <div>
+      <Button />
+    </div>
+  );
 };
