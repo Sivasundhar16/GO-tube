@@ -1,14 +1,35 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Body from "./components/Body";
-import { Head } from "./components/Head";
+import { Head } from "./components/Head"; // Changed to consistent import
+import { Main } from "./components/Main"; // Ensured consistent naming
+import { WatchPage } from "./components/watchpage"; // Updated to start with uppercase
+
+const approuter = createBrowserRouter([
+  {
+    path: "/",
+    element: <Body />,
+    children: [
+      {
+        path: "/",
+        element: <Main />,
+      },
+      {
+        path: "/watch",
+        element: <WatchPage />, // Corrected naming
+      },
+    ],
+  },
+]);
 
 export default function App() {
   return (
     <div>
       <Head />
-      <Body />
+      <RouterProvider router={approuter} />
     </div>
   );
 }
+
 /*
  head
  body
